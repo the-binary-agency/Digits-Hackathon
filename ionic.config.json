@@ -1,5 +1,7 @@
 {
   "name": "Digits-Hackathon",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

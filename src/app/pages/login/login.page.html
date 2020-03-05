@@ -1,0 +1,66 @@
+
+<ion-content>
+  <!-- <div class="login-logo">
+    <img src="assets/img/appicon.svg" alt="Ionic logo">
+  </div>
+
+  <form #loginForm="ngForm" novalidate>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked" color="primary">Username</ion-label>
+        <ion-input [(ngModel)]="login.username" name="username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off"
+          required>
+        </ion-input>
+      </ion-item>
+
+      <ion-text color="danger">
+        <p [hidden]="username.valid || submitted == false" class="ion-padding-start">
+          Username is required
+        </p>
+      </ion-text>
+
+      <ion-item>
+        <ion-label position="stacked" color="primary">Password</ion-label>
+        <ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-text color="danger">
+        <p [hidden]="password.valid || submitted == false" class="ion-padding-start">
+          Password is required
+        </p>
+      </ion-text>
+    </ion-list>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="onLogin(loginForm)" type="submit" expand="block">Login</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="onSignup()" color="light" expand="block">Signup</ion-button>
+      </ion-col>
+    </ion-row>
+  </form> -->
+  <div class="login-box">
+    <form class="form" [formGroup]="validations_form"  (ngSubmit)="login(validations_form.value)">
+            <ion-item lines="inset">
+              <ion-label><ion-icon name="mail"></ion-icon></ion-label>
+              <ion-input type="email" placeholder="E-mail" formControlName="email"></ion-input>
+            </ion-item>
+
+            <ion-item lines="inset">
+                <ion-label><ion-icon name="key"></ion-icon></ion-label>
+              <ion-input type="password" placeholder="Password" formControlName="password" class="form-controll" required></ion-input>
+            </ion-item>
+            <br><br>
+     
+          <ion-button class="submit-btn form-btn" full type="submit" [disabled]="!validations_form.valid">Log In</ion-button>
+        <ion-button class="register-btn form-btn" fill="clear"  (click)="gotosignup()">Create New Account</ion-button>
+      
+    </form>
+  </div>
+  <ion-button class="fingerbtn" (click)="usefinger()" fill="clear">
+      <ion-icon slot="start" name="finger-print"></ion-icon>
+      Use Fingerprint</ion-button>
+      
+</ion-content>

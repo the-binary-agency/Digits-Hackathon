@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyAkiZkM7bgdc0mmM-2r9v1ZTt_j8emYLsQ",
+    authDomain: "digita-c3e1e.firebaseapp.com",
+    databaseURL: "https://digita-c3e1e.firebaseio.com",
+    projectId: "digita-c3e1e",
+    storageBucket: "",
+    messagingSenderId: "63501441362",
+    appId: "1:63501441362:web:5d7fecb16f5691549b828b",
+    measurementId: "G-M2ZG3SWCVF"
+  }
 };
 
 /*
