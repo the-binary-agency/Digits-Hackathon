@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController, LoadingController, AlertController } from '@ionic/angular';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { FirebaseService } from 'src/app/services/firebase.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +9,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+  User: any = "User";
 
-  constructor() { }
+  constructor(private menuCtrl: MenuController,  private firestore: AngularFirestore, private fbservice: FirebaseService,
+    private alert: AlertController, public loadingCtrl: LoadingController) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.menuCtrl.enable(true);
+    const loading = await this.loadingCtrl.create({
+      message: '',
+      spinner: 'bubbles'
+    });
+    await loading.present();
+
+    if(!this.fbservice.firstname){
+      this.User = this.fbservice.email
+      console.log("sertyuiopoiuytr", this.User)
+    }else{
+      this.User = this.fbservice.firstname + " " + this.fbservice.lastname
+    }
+
+    loading.dismiss();
+    console.log(this.fbservice.User)
+    
   }
 
 }
