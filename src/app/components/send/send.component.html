@@ -1,0 +1,7 @@
+<ion-list class="ion-no-margin ion-no-padding" lines="inset">
+  <ion-item *ngFor="let m of medium; let i = index" (click)="selectedIndex = i" routerDirection="forward" [routerLink]="[m.url]" lines="none">
+    <ion-button fill="clear">
+      Send via {{ m.title }}
+    </ion-button>
+  </ion-item>
+</ion-list>

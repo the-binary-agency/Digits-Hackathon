@@ -19,10 +19,11 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule} from '@angular/fire/database';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { SendComponent } from './components/send/send.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, SendComponent],
+  entryComponents: [SendComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
@@ -40,6 +41,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     SplashScreen,
     AuthService,
     FingerprintAIO,
+    SendComponent,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

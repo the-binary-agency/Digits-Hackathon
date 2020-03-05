@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController, LoadingController, AlertController } from '@ionic/angular';
+import { MenuController, LoadingController, AlertController, PopoverController } from '@ionic/angular';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { FirebaseService } from 'src/app/services/firebase.service';
+import { SendComponent } from 'src/app/components/send/send.component';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +12,10 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 export class HomePage implements OnInit {
   User: any = "User";
 
-  constructor(private menuCtrl: MenuController,  private firestore: AngularFirestore, private fbservice: FirebaseService,
-    private alert: AlertController, public loadingCtrl: LoadingController) { }
+  constructor(private menuCtrl: MenuController,  private firestore: AngularFirestore,
+     private fbservice: FirebaseService,
+    private alert: AlertController, public loadingCtrl: LoadingController,
+     public popoverController: PopoverController) { }
 
   async ngOnInit() {
     this.menuCtrl.enable(true);
@@ -32,6 +35,15 @@ export class HomePage implements OnInit {
     loading.dismiss();
     console.log(this.fbservice.User)
     
+  }
+
+  async Send(ev: any) {
+    const popover = await this.popoverController.create({
+      component: SendComponent,
+      event: ev,
+      translucent: true
+    });
+    return await popover.present();
   }
 
 }
