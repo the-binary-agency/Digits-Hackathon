@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Shared Information</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-group>
+      <ion-item-divider sticky>
+        <ion-label>
+          Information Shared
+        </ion-label>
+      </ion-item-divider>
+
+      <ion-item-sliding>
+        <ion-item-options side="start">
+          <ion-item-option color="success" (click)="addFavorite(slidingItem, session)">
+            Favorite
+          </ion-item-option>
+        </ion-item-options>
+        <ion-item routerLink="/shared-info" lines="none">
+          <ion-icon slot="start" name="add"></ion-icon>
+          <ion-label>
+            Age
+            <br><br>
+            <div class="amount-div">
+              <p>
+              Shared With
+            </p>
+            <h3>Laura Hale</h3>
+            </div>
+          </ion-label>
+        </ion-item>
+        <ion-item-options side="end">
+          <ion-item-option side="end" color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')">
+            Remove
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-item-group>
+  </ion-list>
+</ion-content>

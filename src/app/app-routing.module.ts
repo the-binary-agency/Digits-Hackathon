@@ -22,6 +22,18 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'handshake',
+    loadChildren: () => import('./pages/handshake/handshake.module').then( m => m.HandshakePageModule)
+  },
+  {
+    path: 'shared-info',
+    loadChildren: () => import('./pages/shared-info/shared-info.module').then( m => m.SharedInfoPageModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./pages/settings/settings.module').then( m => m.SettingsPageModule)
   }
 ];
 
