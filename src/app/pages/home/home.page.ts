@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MenuController, LoadingController, AlertController, PopoverController } from '@ionic/angular';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MenuController, LoadingController, AlertController, PopoverController, IonSlides } from '@ionic/angular';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { FirebaseService } from 'src/app/services/firebase.service';
 import { SendComponent } from 'src/app/components/send/send.component';
@@ -10,6 +10,8 @@ import { SendComponent } from 'src/app/components/send/send.component';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+  @ViewChild('slides') slides: IonSlides;
+  segment = 0;
   User: any = "User";
 
   constructor(private menuCtrl: MenuController,  private firestore: AngularFirestore,
@@ -35,6 +37,14 @@ export class HomePage implements OnInit {
     loading.dismiss();
     console.log(this.fbservice.User)
     
+  }
+
+  async segmentChanged(){
+    await this.slides.slideTo(this.segment);
+  }
+  
+  async slideChanged(){
+    this.segment = await this.slides.getActiveIndex();
   }
 
   async Send(ev: any) {

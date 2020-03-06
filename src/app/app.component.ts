@@ -58,14 +58,13 @@ export class AppComponent implements OnInit {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.router.navigateByUrl('home');
+      // this.router.navigateByUrl('home');
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
   }
 
   ngOnInit() {
-    console.log("url is", this.url)
     // const path = window.location.pathname.split('folder/')[1];
     // if (path !== undefined) {
     //   this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
