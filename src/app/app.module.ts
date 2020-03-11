@@ -20,10 +20,11 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule} from '@angular/fire/database';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { SendComponent } from './components/send/send.component';
+import { ReceiveComponent } from './components/receive/receive.component';
 
 @NgModule({
-  declarations: [AppComponent, SendComponent],
-  entryComponents: [SendComponent],
+  declarations: [AppComponent, SendComponent, ReceiveComponent],
+  entryComponents: [SendComponent, ReceiveComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
@@ -42,6 +43,7 @@ import { SendComponent } from './components/send/send.component';
     AuthService,
     FingerprintAIO,
     SendComponent,
+    ReceiveComponent,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

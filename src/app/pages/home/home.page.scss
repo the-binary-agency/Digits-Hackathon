@@ -4,5 +4,10 @@
       align-items: baseline;
   }
 .slide-body{
-  width: 100%
+  width: 100%;
+  position: relative;
+}
+ion-item-divider{
+  position: sticky;
+  top: 0;
 }

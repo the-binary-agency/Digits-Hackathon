@@ -38,6 +38,10 @@ const routes: Routes = [
   {
     path: 'send/:id',
     loadChildren: () => import('./pages/send/send.module').then( m => m.SendPageModule)
+  },
+  {
+    path: 'receive/:id',
+    loadChildren: () => import('./pages/receive/receive.module').then( m => m.ReceivePageModule)
   }
 ];
 

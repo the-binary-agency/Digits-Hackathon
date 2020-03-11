@@ -85,8 +85,8 @@ export class LoginPage implements OnInit {
       if(result === "finger" || result === "face"){
         //Fingerprint or Face Auth is available
         this.faio.show({
-          clientId: 'digita-c3e1e',
-          clientSecret: 'AIzaSyAkiZkM7bgdc0mmM-2r9v1ZTt_j8emYLsQ', //Only necessary for Android
+          // clientId: 'digita-c3e1e',
+          // clientSecret: 'AIzaSyAkiZkM7bgdc0mmM-2r9v1ZTt_j8emYLsQ', //Only necessary for Android
           disableBackup: true, //Only for Android(optional)
           // localizedFallbackTitle: 'Use Pin', //Only for iOS
           // localizedReason: 'Please Authenticate' //Only for iOS

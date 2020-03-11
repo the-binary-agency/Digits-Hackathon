@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Send via <span class="medium">{{ medium }}</span></ion-title>
+    <ion-title>Receive via <span class="medium">{{ medium }}</span></ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -23,14 +23,14 @@
     <ion-card-content>
       <div class="amount-div">
         <p>
-        To: 
+        From: 
       </p>
-      <h3>Laura Hale</h3>
+      <h3>John Doe</h3>
       </div>
     </ion-card-content>
   </ion-card>
   <br><br>
-  <ion-button (click)="pay()" expand="block" shape="round">
-    Pay via {{ medium }}
+  <ion-button (click)="receive()" expand="block" shape="round">
+    Receive via {{ medium }}
   </ion-button>
 </ion-content>

@@ -5,7 +5,7 @@
     </ion-buttons>
     <ion-title>Home</ion-title>
   </ion-toolbar>
-  <ion-segment scrollable [(ngModel)]="segment" (ionChange)="segmentChanged($event)">
+  <ion-segment [(ngModel)]="segment" (ionChange)="segmentChanged($event)">
     <ion-segment-button value="0">
       <ion-label>Pay / Receive</ion-label>
     </ion-segment-button>
@@ -25,7 +25,7 @@
         <ion-icon slot="start" ios="paper-plane-outline" md="paper-plane-sharp"></ion-icon>
         Send
       </ion-button>
-      <ion-button (click)="onClick()" fill="clear">
+      <ion-button (click)="Receive($event)" fill="clear">
         <ion-icon slot="start" ios="download-outline" md="download-sharp"></ion-icon>
         Receive
       </ion-button>
@@ -46,7 +46,6 @@
               </ion-label>
             </ion-item-divider>
       
-            <ion-item-sliding>
               <ion-item routerLink="/home">
                 <ion-label>
                   <h3>John Doe</h3>
@@ -58,16 +57,6 @@
                   </div>
                 </ion-label>
               </ion-item>
-              <ion-item-options>
-                <ion-item-option color="favorite" (click)="addFavorite(slidingItem, session)">
-                  Favorite
-                </ion-item-option>
-                <ion-item-option color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')">
-                  Remove
-                </ion-item-option>
-              </ion-item-options>
-            </ion-item-sliding>
-            <ion-item-sliding>
               <ion-item routerLink="/home">
                 <ion-label>
                   <h3>John Doe</h3>
@@ -79,15 +68,6 @@
                   </div>
                 </ion-label>
               </ion-item>
-              <ion-item-options>
-                <ion-item-option color="favorite" (click)="addFavorite(slidingItem, session)">
-                  Favorite
-                </ion-item-option>
-                <ion-item-option color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')">
-                  Remove
-                </ion-item-option>
-              </ion-item-options>
-            </ion-item-sliding>
           </ion-item-group>
           <ion-item-group>
             <ion-item-divider sticky>
@@ -96,7 +76,6 @@
               </ion-label>
             </ion-item-divider>
       
-            <ion-item-sliding>
               <ion-item routerLink="/home">
                 <ion-label>
                   <h3>John Doe</h3>
@@ -108,16 +87,6 @@
                   </div>
                 </ion-label>
               </ion-item>
-              <ion-item-options>
-                <ion-item-option color="favorite" (click)="addFavorite(slidingItem, session)">
-                  Favorite
-                </ion-item-option>
-                <ion-item-option color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')">
-                  Remove
-                </ion-item-option>
-              </ion-item-options>
-            </ion-item-sliding>
-            <ion-item-sliding>
               <ion-item routerLink="/home">
                 <ion-label>
                   <h3>John Doe</h3>
@@ -129,15 +98,6 @@
                   </div>
                 </ion-label>
               </ion-item>
-              <ion-item-options>
-                <ion-item-option color="favorite" (click)="addFavorite(slidingItem, session)">
-                  Favorite
-                </ion-item-option>
-                <ion-item-option color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')">
-                  Remove
-                </ion-item-option>
-              </ion-item-options>
-            </ion-item-sliding>
           </ion-item-group>
           <ion-item-group>
             <ion-item-divider sticky>
@@ -146,7 +106,6 @@
               </ion-label>
             </ion-item-divider>
       
-            <ion-item-sliding>
               <ion-item routerLink="/home">
                 <ion-label>
                   <h3>John Doe</h3>
@@ -158,16 +117,6 @@
                   </div>
                 </ion-label>
               </ion-item>
-              <ion-item-options>
-                <ion-item-option color="favorite" (click)="addFavorite(slidingItem, session)">
-                  Favorite
-                </ion-item-option>
-                <ion-item-option color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')">
-                  Remove
-                </ion-item-option>
-              </ion-item-options>
-            </ion-item-sliding>
-            <ion-item-sliding>
               <ion-item routerLink="/home">
                 <ion-label>
                   <h3>John Doe</h3>
@@ -179,15 +128,6 @@
                   </div>
                 </ion-label>
               </ion-item>
-              <ion-item-options>
-                <ion-item-option color="favorite" (click)="addFavorite(slidingItem, session)">
-                  Favorite
-                </ion-item-option>
-                <ion-item-option color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')">
-                  Remove
-                </ion-item-option>
-              </ion-item-options>
-            </ion-item-sliding>
           </ion-item-group>
           <ion-item-group>
             <ion-item-divider sticky>
@@ -196,7 +136,6 @@
               </ion-label>
             </ion-item-divider>
       
-            <ion-item-sliding>
               <ion-item routerLink="/home">
                 <ion-label>
                   <h3>John Doe</h3>
@@ -208,16 +147,6 @@
                   </div>
                 </ion-label>
               </ion-item>
-              <ion-item-options>
-                <ion-item-option color="favorite" (click)="addFavorite(slidingItem, session)">
-                  Favorite
-                </ion-item-option>
-                <ion-item-option color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')">
-                  Remove
-                </ion-item-option>
-              </ion-item-options>
-            </ion-item-sliding>
-            <ion-item-sliding>
               <ion-item routerLink="/home">
                 <ion-label>
                   <h3>John Doe</h3>
@@ -229,15 +158,6 @@
                   </div>
                 </ion-label>
               </ion-item>
-              <ion-item-options>
-                <ion-item-option color="favorite" (click)="addFavorite(slidingItem, session)">
-                  Favorite
-                </ion-item-option>
-                <ion-item-option color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')">
-                  Remove
-                </ion-item-option>
-              </ion-item-options>
-            </ion-item-sliding>
           </ion-item-group>
           <ion-item-group>
             <ion-item-divider sticky>
@@ -246,7 +166,6 @@
               </ion-label>
             </ion-item-divider>
       
-            <ion-item-sliding>
               <ion-item routerLink="/home">
                 <ion-label>
                   <h3>John Doe</h3>
@@ -258,16 +177,6 @@
                   </div>
                 </ion-label>
               </ion-item>
-              <ion-item-options>
-                <ion-item-option color="favorite" (click)="addFavorite(slidingItem, session)">
-                  Favorite
-                </ion-item-option>
-                <ion-item-option color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')">
-                  Remove
-                </ion-item-option>
-              </ion-item-options>
-            </ion-item-sliding>
-            <ion-item-sliding>
               <ion-item routerLink="/home">
                 <ion-label>
                   <h3>John Doe</h3>
@@ -279,15 +188,6 @@
                   </div>
                 </ion-label>
               </ion-item>
-              <ion-item-options>
-                <ion-item-option color="favorite" (click)="addFavorite(slidingItem, session)">
-                  Favorite
-                </ion-item-option>
-                <ion-item-option color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')">
-                  Remove
-                </ion-item-option>
-              </ion-item-options>
-            </ion-item-sliding>
           </ion-item-group>
         </ion-list>
       </div>
@@ -297,7 +197,94 @@
 
     <ion-slide>
       <div class="slide-body">
-        
+        <ion-item-divider>
+          <ion-label>Added Cards</ion-label>
+        </ion-item-divider>
+        <ion-slides mode="ios" pager="ios" scrollbar="ios">
+          <ion-slide>
+            <div class="slide-body">
+              <ion-card>
+                <ion-card-header>
+                  <ion-card-title class="ion-text-start">
+                    Card 1
+                  </ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                  <div class="amount-div">
+                  <p>
+                    
+                  </p>
+                  <h3><ion-img src="../../../assets/mastercard.png"></ion-img></h3>
+                  </div>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-slide>
+        </ion-slides>
+
+
+        <ion-item-divider>
+          <ion-label>Add New Card</ion-label>
+        </ion-item-divider>
+
+
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size="6">
+              <ion-item>
+                <ion-label position="floating">First Name</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="6">
+              <ion-item>
+                <ion-label position="floating">Last Name</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="6">
+              <ion-item>
+                <ion-label position="floating">Phone</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="6">
+              <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="12">
+              <ion-item>
+                <ion-label position="floating">Card Number</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="12">
+              <ion-item>
+                <ion-label position="floating">Name on Card</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="6">
+              <ion-item>
+                <ion-label position="floating">CVV</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="6">
+              <ion-item>
+                <ion-label position="floating">Expiry Date</ion-label>
+                  <ion-datetime display-format="MM.YYYY"></ion-datetime>
+              </ion-item>
+            </ion-col>
+            <ion-col size="12">
+              <ion-button (click)="addCard()" expand="block" shape="round">
+                Add Card
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </div>
     </ion-slide>
   </ion-slides>
